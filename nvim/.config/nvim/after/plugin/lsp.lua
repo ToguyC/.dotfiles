@@ -36,6 +36,16 @@ lsp.set_preferences({
     }
 })
 
+local lsp_formatting = function(bufnr)
+    vim.lsp.buf.format({
+        filter = function(client)
+            -- apply whatever logic you want (in this example, we'll only use null-ls)
+            return client.name == "null-ls"
+        end,
+        bufnr = bufnr,
+    })
+end
+
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
@@ -45,7 +55,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
   vim.keymap.set("n", "<leader>rf", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "<leader>rr", function() vim.lsp.buf.rename() end, opts)
-  vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.formatting() end, opts)
+  vim.keymap.set("n", "<leader>lf", function() lsp_formatting(bufnr) end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
