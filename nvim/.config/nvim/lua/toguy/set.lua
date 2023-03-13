@@ -14,7 +14,6 @@ set.shiftwidth = 4
 set.smartindent = true
 
 set.number = true
-set.relativenumber = true
 set.signcolumn = 'yes'
 set.cursorline = true
 set.numberwidth = 4
