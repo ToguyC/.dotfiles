@@ -45,9 +45,6 @@ gaps inner 5
 client.focused 		    #22445f #22445f #ffffff #22445f	  #22445f
 client.unfocused        #222222 #222222 #888888 #292d2e   #222222
 
-# Compositor
-exec_always --no-startup-id compton
-
 # Power
 bindsym $mod+Shift+x exec rofi -show Power -modi Power:$HOME/.config/rofi/power.sh
 
