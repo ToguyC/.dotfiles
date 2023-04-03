@@ -158,7 +158,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 7.0
+  size: 9.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -758,7 +758,7 @@ font:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-#key_bindings:
+key_bindings:
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
@@ -839,10 +839,10 @@ font:
   #- { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
   #- { key: Insert,         mods: Shift,                           action: PasteSelection   }
   #- { key: Key0,           mods: Control,                         action: ResetFontSize    }
-  #- { key: Equals,         mods: Control,                         action: IncreaseFontSize }
+  - { key: Period,         mods: Control,                         action: IncreaseFontSize }
   #- { key: Plus,           mods: Control,                         action: IncreaseFontSize }
   #- { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
-  #- { key: Minus,          mods: Control,                         action: DecreaseFontSize }
+  - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
   #- { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
 
   # (Windows only)
