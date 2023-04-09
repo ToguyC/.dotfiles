@@ -93,4 +93,5 @@ return require("packer").startup(function(use)
     use("preservim/tagbar")
     use("tpope/vim-unimpaired")
     use 'navarasu/onedark.nvim'
+    use 'folke/tokyonight.nvim'
 end)
