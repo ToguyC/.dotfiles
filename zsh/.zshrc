@@ -76,6 +76,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+bindkey -M vicmd '/' history-incremental-search-forward
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -110,3 +112,5 @@ alias ucc="sudo pacman -Syuu && yay -Sua && yes y | sudo pacman -Scc"
 
 ### RANDOM COLOR SCRIPT ###
 # colorscript random
+
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
