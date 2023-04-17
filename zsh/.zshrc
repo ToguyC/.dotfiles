@@ -77,6 +77,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 bindkey -M vicmd '/' history-incremental-search-forward
+bindkey -r "^[x"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
