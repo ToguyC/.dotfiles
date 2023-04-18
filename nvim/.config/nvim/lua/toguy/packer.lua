@@ -94,4 +94,5 @@ return require("packer").startup(function(use)
     use("tpope/vim-unimpaired")
     use 'navarasu/onedark.nvim'
     use 'folke/tokyonight.nvim'
+    use 'ellisonleao/gruvbox.nvim'
 end)

@@ -3,4 +3,4 @@
 --     transparent = false,
 -- }
 -- require("onedark").load()
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme gruvbox]]
