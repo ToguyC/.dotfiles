@@ -106,7 +106,6 @@ export PATH_TO_FX=~/lib/javafx-sdk-19/lib
 alias ls="exa"
 alias ll="exa -lh"
 alias lla="ll -a"
-alias tmux="tmux attach || tmux"
 
 eval "$(zoxide init zsh)"
 
