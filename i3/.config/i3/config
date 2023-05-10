@@ -24,7 +24,7 @@ font pango:FiraCode Nerd Font 9
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 04090e --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -34,15 +34,15 @@ exec --no-startup-id nm-applet
 # exec_always --no-startup-id $HOME/scripts/setscreen.sh
 
 # Gaps
-new_window normal 2 
+new_window pixel 2 
 # default_border normal 2
-default_border normal 2
+default_border pixel 2
 default_floating_border normal 0
 gaps inner 5
 
 # Colors
 # class                 border  backgr. text    indicator child_border
-client.focused 		    #22445f #22445f #ffffff #22445f	  #22445f
+client.focused 		    #DF5A61 #DF5A61 #000000 #DF5A61	  #DF5A61
 client.unfocused        #222222 #222222 #888888 #292d2e   #222222
 
 # Power
@@ -85,10 +85,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+eacute move right
+# bindsym $mod+Shift+j move left
+# bindsym $mod+Shift+k move down
+# bindsym $mod+Shift+l move up
+# bindsym $mod+Shift+eacute move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -109,6 +109,9 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+
+# lock bind
+bindsym $mod+Shift+l exec i3lock -ef -c 04090e
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -263,7 +266,7 @@ bar {
 
 # Wallpaper
 # exec_always --no-startup-id feh --bg-fill ~/pictures/wallpapers/Gruv/platform.jpg
-exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill ~/pictures/dominik-mayer-wanderer-04.jpg
 
 # Xrdb
 exec xrdb -merge ~/.config/urxvt/.Xressources

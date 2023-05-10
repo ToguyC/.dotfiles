@@ -8,5 +8,6 @@ null_ls.setup({
 		null_ls.builtins.formatting.rustfmt,
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.pint,
+        null_ls.builtins.formatting.sqlfluff,
 	},
 })
