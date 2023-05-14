@@ -266,7 +266,7 @@ bar {
 
 # Wallpaper
 # exec_always --no-startup-id feh --bg-fill ~/pictures/wallpapers/Gruv/platform.jpg
-exec_always --no-startup-id feh --bg-fill ~/pictures/dominik-mayer-wanderer-04.jpg
+exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper.jpg
 
 # Xrdb
 exec xrdb -merge ~/.config/urxvt/.Xressources
