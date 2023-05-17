@@ -101,4 +101,5 @@ return require("packer").startup(function(use)
     use 'navarasu/onedark.nvim'
     use 'folke/tokyonight.nvim'
     use 'ellisonleao/gruvbox.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
 end)
