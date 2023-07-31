@@ -106,12 +106,12 @@ export PATH_TO_FX=~/lib/javafx-sdk-19/lib
 alias ls="exa"
 alias ll="exa -lh"
 alias lla="ll -a"
+alias vim="nvim"
 
 eval "$(zoxide init zsh)"
 
 alias ucc="sudo pacman -Syuu && yay -Sua && yes y | sudo pacman -Scc"
 
-### RANDOM COLOR SCRIPT ###
-# colorscript random
+alias snvm="source /usr/share/nvm/init-nvm.sh"
 
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
