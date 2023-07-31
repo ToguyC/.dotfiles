@@ -186,7 +186,7 @@ for_window [urgent=latest] focus
 
 # assign apps to workspace
 for_window [class="Spotify"] move window to workspace $ws4
-for_window [class="Code"] move window to workspace $ws1
+#for_window [class="Code"] move window to workspace $ws1
 #for_window [class="URxvt"] move window to workspace $ws3
 for_window [class="obs"] move window to workspace $ws5
 for_window [class="Discord"] move window to workspace $ws7
