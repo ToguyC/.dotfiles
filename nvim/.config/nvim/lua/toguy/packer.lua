@@ -1,46 +1,34 @@
-return require("packer").startup(function(use)
+-- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
+-- Only required if you have packer configured as `opt`
+vim.cmd [[packadd packer.nvim]]
+
+return require('packer').startup(function(use)
     -- Packer can manage itself
-    use("wbthomason/packer.nvim")
+    use 'wbthomason/packer.nvim'
+
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
     use({
-        "nvim-telescope/telescope.nvim",
-        tag = "0.1.0",
-        requires = { { "nvim-lua/plenary.nvim" } },
-    })
-
-    use({
-        "nvim-telescope/telescope-fzf-native.nvim",
-        run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
-    })
-
-    use({
-        "nvim-lualine/lualine.nvim",
-        requires = { "kyazdani42/nvim-web-devicons", opt = true },
-    })
-
-    use({
-        "nvim-tree/nvim-tree.lua",
-        requires = {
-            "nvim-tree/nvim-web-devicons", -- optional, for file icons
-        },
-        tag = "nightly", -- optional, updated every week. (see issue #1193)
-    })
-
-    use({
-        "folke/trouble.nvim",
+        'rose-pine/neovim',
+        as = 'rose-pine',
         config = function()
-            require("trouble").setup {
-                icons = false,
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
+            vim.cmd('colorscheme rose-pine')
         end
     })
 
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/playground')
+    use('theprimeagen/harpoon')
+    use('mbbill/undotree')
+    use('tpope/vim-fugitive')
+
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
         requires = {
             -- LSP Support
             {'neovim/nvim-lspconfig'},
@@ -61,45 +49,7 @@ return require("packer").startup(function(use)
         }
     }
 
-    use 'mfussenegger/nvim-dap'
-
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-    use "folke/neodev.nvim"
-    
-    use 'simrat39/rust-tools.nvim'
-
-    use({
-        "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate",
-    })
-
-    use({
-        "terrortylor/nvim-comment",
-        config = function()
-            require("nvim_comment").setup()
-        end,
-    })
-
-    use({
-        "windwp/nvim-autopairs",
-        config = function()
-            require("nvim-autopairs").setup({})
-        end,
-    })
-
-    use {
-        'lewis6991/gitsigns.nvim',
-        -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
-    }
-
-    use("folke/zen-mode.nvim")
-    use("mfussenegger/nvim-jdtls")
-    use("jose-elias-alvarez/null-ls.nvim")
-    use("voldikss/vim-floaterm")
-    use("preservim/tagbar")
-    use("tpope/vim-unimpaired")
-    use 'navarasu/onedark.nvim'
-    use 'folke/tokyonight.nvim'
-    use 'ellisonleao/gruvbox.nvim'
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end}
 end)

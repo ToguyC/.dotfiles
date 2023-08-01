@@ -1,23 +1,23 @@
-local function map(mode, lhs, rhs, opts)
-	local options = { noremap = true }
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
-map("n", "<C-H>", "<C-W><C-H>")
-map("n", "<C-J>", "<C-W><C-J>")
-map("n", "<C-K>", "<C-W><C-K>")
-map("n", "<C-L>", "<C-W><C-L>")
-map("n", "<C-C>", "<C-W><C-C>")
-map("t", "<C-H>", "<C-\\><C-n><C-W><C-H>")
-map("t", "<C-J>", "<C-\\><C-n><C-W><C-J>")
-map("t", "<C-K>", "<C-\\><C-n><C-W><C-K>")
-map("t", "<C-L>", "<C-\\><C-n><C-W><C-L>")
-map("t", "<C-X>", "<C-\\><C-n><C-W><C-C>")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-map("n", "<A-k>", "[e", { noremap = false })
-map("n", "<A-j>", "]e", { noremap = false })
-map("v", "<A-k>", "[egv", { noremap = false })
-map("v", "<A-j>", "]egv", { noremap = false })
+vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+vim.keymap.set("x", "<leader>p", "\"_dP")
+
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+vim.keymap.set("n", "<leader>d", "\"_d")
+
+vim.keymap.set("n", "Q", "<nop>")
+
+vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })

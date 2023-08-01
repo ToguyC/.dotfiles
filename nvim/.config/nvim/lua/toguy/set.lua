@@ -1,38 +1,35 @@
--- GENERAL CONFIG
+local opt = vim.opt
 
-vim.g.mapleader = ' '
+opt.guicursor = ""
 
-local set = vim.opt
+opt.nu = true
+opt.relativenumber = true
 
-set.termguicolors = true
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
 
-set.tabstop = 4
-set.softtabstop = 4
-set.expandtab = true
-set.shiftwidth = 4
+opt.smartindent = true
 
-set.smartindent = true
+opt.wrap = false
 
-set.number = true
-set.signcolumn = 'yes'
-set.cursorline = true
-set.numberwidth = 4
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true
 
-set.incsearch = true
-set.hlsearch = false
+opt.hlsearch = false
+opt.incsearch = true
 
-set.splitbelow = true
-set.splitright = true
+opt.termguicolors = true
 
-set.hidden = true
+opt.scrolloff = 8
+opt.signcolumn = "yes"
+opt.isfname:append("@-@")
 
-set.scrolloff = 10
+opt.updatetime = 50
 
-set.mouse = 'a'
+opt.colorcolumn = "80"
 
-set.ignorecase = true
-set.smartcase = true
-
-set.showmode = false
-
-set.foldmethod = "marker"
+vim.g.mapleader = " "
