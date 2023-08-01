@@ -112,6 +112,11 @@ eval "$(zoxide init zsh)"
 
 alias ucc="sudo pacman -Syuu && yay -Sua && yes y | sudo pacman -Scc"
 
-alias snvm="source /usr/share/nvm/init-nvm.sh"
-
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+# Add default node to path
+export PATH=~/.nvm/versions/node/v20.5.0/bin:$PATH
+
+# Load NVM
+export NVM_DIR=~/.nvm
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh" --no-use
