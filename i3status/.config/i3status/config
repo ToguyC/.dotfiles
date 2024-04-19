@@ -22,20 +22,26 @@ order += "disk /home"
 #order += "run_watch DHCP"
 #order += "ipv6"
 #order += "run_watch VPN"
-order += "wireless wlan0"
+order += "wireless wlp0s20f3"
+order += "ethernet enx64c901d938ae"
 order += "battery 0"
 #order += "cpu_temperature 0"
 order += "cpu_usage 0"
-order += "load"
+#order += "load"
 order += "tztime local"
 
-wireless wlan0 {
-    format_up = "  %essid [%quality]"
+wireless wlp0s20f3 {
+    format_up = "  %essid [%ip - %bitrate]"
     format_down = ""
 }
 
+ethernet enx64c901d938ae {
+    format_up = "W: %ip [%speed]"
+    format_down = "W: down"
+}
+
 battery 0 {
-    format = "%status %percentage %remaining"
+    format = "%status %percentage"
     format_down = ""
     last_full_capacity = true
     integer_battery_capacity = true

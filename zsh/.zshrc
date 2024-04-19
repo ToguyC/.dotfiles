@@ -106,9 +106,9 @@ export PATH_TO_FX=~/lib/javafx-sdk-19/lib
 alias ls="exa"
 alias ll="exa -lh"
 alias lla="ll -a"
-alias vim="nvim"
+alias pdf="zathura"
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 alias ucc="sudo pacman -Syuu && yay -Sua && yes y | sudo pacman -Scc"
 
@@ -120,3 +120,31 @@ export PATH=~/.nvm/versions/node/v20.5.0/bin:$PATH
 # Load NVM
 export NVM_DIR=~/.nvm
 [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh" --no-use
+
+# golang
+export PATH=$PATH:/usr/local/go/bin
+
+# bun completions
+[ -s "/home/toguy/.bun/_bun" ] && source "/home/toguy/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# protobuf
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+# kubernetes
+export PATH="$PATH:$HOME/.local/bin"
+
+# laravel sail
+export WWWUSER="$(id -u $USER)"
+export WWWGROUP="$(id -g)"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# react native
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+eval $(thefuck --alias)

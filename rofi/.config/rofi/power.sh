@@ -10,10 +10,10 @@ then
 			i3-msg exit
 			;;
 		*Shutdown)
-			shutdown now
+			sudo poweroff
 			;;
 		*Reboot)
-			reboot
+			sudo reboot
 			;;
 	esac
 else
