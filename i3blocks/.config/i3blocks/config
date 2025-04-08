@@ -1,0 +1,35 @@
+separator=false
+separator_block_width=20
+markup=pango
+
+# Guess the weather hourly
+[weather]
+command=curl -Ss 'https://wttr.in/?format=%22%l:+%C+%t+%28%f%29%22' | xargs echo
+interval=3600
+color=#A4C2F4
+
+[disk]
+command=~/.config/i3blocks/blocks/disk.sh
+interval=60
+
+[volume-pulseaudio]
+command=~/.config/i3blocks/blocks/volume.sh
+instance=Master
+interval=1
+
+[network]
+command=~/.config/i3blocks/blocks/network.sh
+interval=5
+
+[cpu]
+command=~/.config/i3blocks/blocks/cpu.sh
+interval=5
+
+[battery]
+command=~/.config/i3blocks/blocks/battery.pl
+interval=10
+
+[time]
+command=date "+%F %H:%M:%S"
+interval=1
+

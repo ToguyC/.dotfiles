@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="i3,i3status,zsh,neofetch,alacritty,rofi,wallpapers"
+    STOW_FOLDERS="i3,zsh,neofetch,alacritty,rofi,wallpapers,i3blocks"
 fi
 
 if [[ -z $DOTFILES ]]; then

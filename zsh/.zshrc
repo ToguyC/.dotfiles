@@ -70,7 +70,7 @@ ZSH_THEME="bira"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,6 +107,9 @@ alias ls="exa"
 alias ll="exa -lh"
 alias lla="ll -a"
 alias pdf="zathura"
+alias vim="nvim"
+alias cve="python3.12 -m venv .venv"
+alias urepo='git init -b main && git config user.email "tanguy.cavagna@etu.unige.ch" && git config user.name "tanguy.cavagna" && echo ".venv/" > .gitignore && git remote add origin '
 
 eval "$(zoxide init --cmd cd zsh)"
 
@@ -148,3 +151,10 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 eval $(thefuck --alias)
+
+export PATH=$PATH:~/Downloads/swift/swift-6.0.1-RELEASE-debian12/usr/bin
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
+eval "$(pyenv virtualenv-init -)"
