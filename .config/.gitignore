@@ -3,9 +3,6 @@
 
 # ...but allow these dotfiles/config subdirectories to be explored
 !.config/
-!.config/.gitignore
-!.config/install.sh
-!.config/README.md
 !.zshrc
 !.bashrc
 
