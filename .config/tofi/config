@@ -1,6 +1,6 @@
 # ~/.config/tofi/config — btop-style launcher
 
-font = /usr/share/fonts/jetbrains-mono-fonts/JetBrainsMono-Regular.otf
+font = /usr/share/fonts/iosevkaterm-nerd-font/IosevkaTermNerdFont-Regular.ttf
 font-size = 12
 
 # Layout
