@@ -1,0 +1,6 @@
+format = "[$username](#66d9ef)[@](dim)[$hostname](#66d9ef) [$directory](#a6e22e)[$git_branch](#f4bf75) [$character](bold)"
+add_newline = false
+
+[character]
+success_symbol = "[>](#a6e22e)"
+error_symbol = "[>](#f92672)"

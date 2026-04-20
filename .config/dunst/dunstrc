@@ -1,0 +1,23 @@
+[global]
+    font = Iosevka Nerd Font 10
+    frame_width = 1
+    frame_color = "#2a2f38"
+    corner_radius = 0
+    width = 320
+    origin = top-right
+    offset = 8x40
+    padding = 8
+    format = "<b>%s</b>\n%b"
+
+[urgency_low]
+    background = "#0f1114"
+    foreground = "#c8ccd4"
+
+[urgency_normal]
+    background = "#0f1114"
+    foreground = "#c8ccd4"
+
+[urgency_critical]
+    background = "#0f1114"
+    foreground = "#f92672"
+    frame_color = "#f92672"

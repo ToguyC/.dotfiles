@@ -1,0 +1,41 @@
+# ~/.config/tofi/config — btop-style launcher
+
+font = /usr/share/fonts/jetbrains-mono-fonts/JetBrainsMono-Regular.otf
+font-size = 12
+
+# Layout
+width = 40%
+height = 40%
+anchor = center
+horizontal = false
+
+# Padding inside the window
+padding-top = 12
+padding-bottom = 12
+padding-left = 16
+padding-right = 16
+
+# Border around the whole window
+border-width = 1
+border-color = #2a2f38
+outline-width = 0
+
+# Background / text colors (matches the bar's theme.qml)
+background-color = #0f1114
+text-color       = #c8ccd4
+
+# The "> " prompt
+prompt-text   = "> "
+prompt-color  = #66d9ef
+
+# Currently-highlighted item
+selection-color            = #a6e22e
+selection-background       = #1a1d23
+selection-padding          = 4
+
+# Results layout
+num-results    = 10
+result-spacing = 2
+
+# Input field
+input-color = #eef0f4
