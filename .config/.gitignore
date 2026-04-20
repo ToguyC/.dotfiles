@@ -2,11 +2,12 @@
 *
 
 # ...but allow these dotfiles/config subdirectories to be explored
-!.gitignore
 !.config/
+!.config/.gitignore
+!.config/install.sh
+!.config/README.md
 !.zshrc
 !.bashrc
-!install.sh
 
 # Inside allowed dirs, still exclude secrets & caches
 .config/**/cache/
