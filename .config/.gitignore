@@ -1,0 +1,19 @@
+# Ignore everything by default — we opt-in via explicit `dot add`
+*
+
+# ...but allow these dotfiles/config subdirectories to be explored
+!.gitignore
+!.config/
+!.zshrc
+!.bashrc
+!install.sh
+
+# Inside allowed dirs, still exclude secrets & caches
+.config/**/cache/
+.config/**/secrets/
+.config/**/*.key
+.config/**/*.pem
+.ssh/
+.gnupg/
+.aws/
+.local/share/
